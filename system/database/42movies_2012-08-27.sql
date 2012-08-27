@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.5.24)
 # Database: 42movies
-# Generation Time: 2012-08-27 21:06:41 +0000
+# Generation Time: 2012-08-27 22:57:36 +0000
 # ************************************************************
 
 
@@ -73,11 +73,29 @@ CREATE TABLE `movie_rates` (
 DROP TABLE IF EXISTS `movies`;
 
 CREATE TABLE `movies` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL DEFAULT '',
   `year` int(11) DEFAULT NULL,
   `description` varchar(1500) DEFAULT '',
   `banner_url` varchar(300) DEFAULT NULL,
+  `thumbnail_url` varchar(300) DEFAULT NULL,
+  `fb_id` int(11) DEFAULT NULL,
+  `rt_id` int(11) DEFAULT NULL,
+  `source` int(2) NOT NULL,
+  `resource_url` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+# Dump of table source
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `source`;
+
+CREATE TABLE `source` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -127,6 +145,15 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id_fb`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+
+INSERT INTO `users` (`id_fb`, `name`, `avatar_url`, `created_at`)
+VALUES
+	('1','Jose Carlos','','0000-00-00 00:00:00');
+
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 
