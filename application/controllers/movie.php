@@ -10,4 +10,8 @@ class Movie extends CI_Controller
 	{
 		$this->load->view('movie_index');
 	}
+	public function search()
+	{
+		$this->load->view('movie_search');
+	}
 }
