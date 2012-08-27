@@ -4,7 +4,7 @@ SEARCH.template = _.template('<tr>\
 	<td><a href="#" data-rt-id="<%= id %>"><%= title %> (<%= year %>)</a></td>\
 	<td><a href="#" data-rt-id="<%= id %>" class="btn btn-success">checkin</a></td>\
 </tr>');
-SEARCH.pagination = _.template('<ul><% for(var i = 1; i < total; i++){ %><li><a href="#" class="page-rt" data-page="<%= i %>"><%= i %></a></li> <% } %></ul>');
+SEARCH.pagination = _.template('<ul><% for(var i = 1; i < total; i++){ %><li><a href="#" class="search-rt page-btn" data-page="<%= i %>"><%= i %></a></li> <% } %></ul>');
 SEARCH.page = 1;
 
 function RTSearch( e)
@@ -45,6 +45,9 @@ function RTSearch( e)
 			
 			RTSearch( this);
 			event.preventDefault();
+		});
+		$('.page-btn').click( function(){
+			
 		});
 		
 		
