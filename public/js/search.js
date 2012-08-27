@@ -1,7 +1,7 @@
 var SEARCH = {};
 SEARCH.template = _.template('<tr>\
-	<td width="70"><img src="<%= posters.detailed %>"/></td>\
-	<td><a href="#" data-rt-id="<%= id %>"><%= title %> (<%= year %>)</a></td>\
+	<td width="70"><img src="<%= posters.thumbnail %>" width="61"/></td>\
+	<td><a href="/42movies/index.php/movie/detail/?movie_id=<%= id %>&source=rt" data-rt-id="<%= id %>"><%= title %> (<%= year %>)</a></td>\
 	<td><a href="#" data-rt-id="<%= id %>" class="btn btn-success">checkin</a></td>\
 </tr>');
 SEARCH.pagination = _.template('<ul><% for(var i = 1; i < total; i++){ %><li><a href="#" class="search-rt page-btn" data-page="<%= i %>"><%= i %></a></li> <% } %></ul>');

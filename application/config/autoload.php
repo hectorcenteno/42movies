@@ -52,7 +52,8 @@ $autoload['packages'] = array();
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array('facebook');
+//$autoload['libraries'] = array('facebook');
+$autoload['libraries'] = array('facebook','database','session','user_agent');
 
 
 /*
