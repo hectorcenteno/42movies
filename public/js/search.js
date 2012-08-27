@@ -1,6 +1,6 @@
 var SEARCH = {};
 SEARCH.template = _.template('<tr>\
-	<td width="70"><img src="<%= posters.thumbnail %>" width="61"/></td>\
+	<td width="70"><img src="<%= posters.detailed %>"/></td>\
 	<td><a href="#" data-rt-id="<%= id %>"><%= title %> (<%= year %>)</a></td>\
 	<td><a href="#" data-rt-id="<%= id %>" class="btn btn-success">checkin</a></td>\
 </tr>');
