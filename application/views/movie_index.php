@@ -3,12 +3,15 @@
 <head>
 	<meta charset="utf-8">
 	<title>Peliculas</title>
-	<script src="js/jquery-1.8.0.min.js" type="text/javascript" charset="utf-8"></script>
-	<link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	
+	<link rel="stylesheet" href="<?php echo base_url('public/bootstrap/css/bootstrap-responsive.min.css'); ?>" type="text/css" media="screen" title="no title" charset="utf-8">
+	 <script type="text/javascript" src="<?php echo base_url('public/js/jquery-1.8.0.min.js'); ?>"></script>
+	 
 </head>
 	
 <body>
-	<h1>Hola</h1>
+	<div class="container-fluid">
+		<h1>42Movies</h1>
+	</div>
 </body>
 </html>
