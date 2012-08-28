@@ -23,10 +23,16 @@
 		<div class="row-fluid">
 			<div class="span12">
 				
-				<form action="<?php echo base_url('movie/search'); ?>" class="form-search">
-				<input type="text" name="q" value="dark night" id="search-term" class="input-medium search-query">
-				<button type="submit" id="search-btn" data-page="1" class="btn search-rt">Search</button>
-				</form>
+				<div class="navbar">
+					<div class="navbar-inner">
+					<form action="<?php echo base_url('movie/search'); ?>" class="navbar-form pull-left form-search">
+					<input type="text" name="q" value="dark night" id="search-term" class="search-query">
+					<button type="submit" id="search-btn" data-page="1" class="btn search-rt">Search</button>
+					</form>
+					</div>
+				</div>
+				
+				
 				<h1>Nombre pelicula</h1>
 				<table>
 					<tr>
@@ -38,6 +44,8 @@
 						<td>8/10</td>
 					</tr>
 				</table>
+				
+				
 				
 			</div>
 

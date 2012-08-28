@@ -24,7 +24,6 @@ class Movie extends CI_Controller
 		$movie_id = (isset($_GET['movie_id']) && is_numeric($_GET['movie_id'])) ? $_GET['movie_id'] : 0;
 		$movie_tyep = isset($_GET['source']) ?  $_GET['source'] : 'rt';
 		
-		
 		//$this->MovieModel->insert(array('name' => 'Movie', 'year' => 2008, 'descripcion' => 'banner_url', 'source' => 'rt'));
 		
 		if($movie_id == 0)

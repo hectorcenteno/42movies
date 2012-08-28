@@ -23,10 +23,14 @@
 		<div class="row-fluid">
 			<div class="span12">
 				
-				<form class="form-search">
-				<input type="text" value="dark night" id="search-term" class="input-medium search-query">
-				<button type="submit" id="search-btn" data-page="1" class="btn search-rt">Search</button>
-				</form>
+				<div class="navbar">
+					<div class="navbar-inner">
+					<form action="<?php echo base_url('movie/search'); ?>" class="navbar-form pull-left form-search">
+					<input type="text" name="q" value="dark night" id="search-term" class="search-query">
+					<button type="submit" id="search-btn" data-page="1" class="btn search-rt">Search</button>
+					</form>
+					</div>
+				</div>
 				
 				<table class="table">
 					<thead>
