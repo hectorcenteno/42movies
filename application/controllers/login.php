@@ -21,6 +21,9 @@ class Login extends CI_Controller {
 				// Proceed knowing you have a logged in user who's authenticated.
 				$user_profile = $this->facebook->api('/me');
 				$data['user'] = $user_profile;
+				$data['facebook'] = $this->facebook;
+				//$content = file_get_contents('https://graph.facebook.com/oauth/access_token?client_id=' + $config ['appId'] + '&client_secret=' + $config ['appId'] + '&grant_type=client_credentials');
+				//$data['token'] = explode($content,'=')[0];
 				$this->load->view('profile',$data);
 			}
 			catch (FacebookApiException $e) {
