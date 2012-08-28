@@ -26,8 +26,8 @@
 				<div class="navbar">
 					<div class="navbar-inner">
 					<form action="<?php echo base_url('movie/search'); ?>" class="navbar-form pull-left form-search">
-					<input type="text" name="q" value="dark night" id="search-term" class="search-query">
-					<button type="submit" id="search-btn" data-page="1" class="btn search-rt">Search</button>
+					<input type="text" name="q" value="dark night" id="search-term" class="search-query span1" style="width: 150px">
+					<button type="submit" id="search-btn" data-page="1" class="btn search-rt">Buscar</button>
 					</form>
 					</div>
 				</div>

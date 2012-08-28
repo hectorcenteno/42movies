@@ -36,7 +36,7 @@
 				<h1>Nombre pelicula</h1>
 				<table>
 					<tr>
-						<td>imagen</td>
+						<td><img src="http://content6.flixster.com/movie/11/16/51/11165160_pro.jpg"></td>
 						<td>Nullam id dolor id nibh ultricies vehicula ut id elit. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</td>
 					</tr>
 					<tr>
@@ -45,9 +45,26 @@
 					</tr>
 				</table>
 				
-				
+				<div class="btn-group">
+			    <button class="btn">YA LA VI</button>
+			    <button class="btn">FAVORITO</button>
+			    <button class="btn">CHECK-IN</button>
+			    </div>
 				
 			</div>
+
+			
+			<table  class="table table-hover">
+				<tr>
+					<td>Avatar</td>
+					<td>
+						<span>Hector Centeno</span>
+						<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+					</td>
+					<td>4/10</td>
+				</tr>
+			</table>
+
 
 		</div>
 		
