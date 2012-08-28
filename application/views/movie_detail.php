@@ -11,7 +11,7 @@
 
 	<script src="<?php echo base_url('public/js/sugar-1.3.min.js'); ?>" type="text/javascript" charset="utf-8"></script>
 	<script src="<?php echo base_url('public/js/rottentomatoes.js'); ?>" type="text/javascript" charset="utf-8"></script>
-	<script src="<?php echo base_url('public/js/search.js'); ?>" type="text/javascript" charset="utf-8"></script>
+	<script src="<?php echo base_url('public/js/movie-detail.js'); ?>" type="text/javascript" charset="utf-8"></script>
 	
 	 
 </head>
@@ -26,42 +26,43 @@
 				<div class="navbar">
 					<div class="navbar-inner">
 					<form action="<?php echo base_url('movie/search'); ?>" class="navbar-form pull-left form-search">
-					<input type="text" name="q" value="dark night" id="search-term" class="search-query">
+					<input type="text" name="q" value="dark night" id="search-term" class="search-query span1" style="width: 150px">
 					<button type="submit" id="search-btn" data-page="1" class="btn search-rt">Search</button>
 					</form>
 					</div>
 				</div>
 				
 				
-				<h1>Nombre pelicula</h1>
+				<h2 class="movie_name"><!-- nombre --></h2>
 				<table>
 					<tr>
-						<td><img src="http://content6.flixster.com/movie/11/16/51/11165160_pro.jpg"></td>
-						<td>Nullam id dolor id nibh ultricies vehicula ut id elit. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</td>
+						<td width="100"><img src="" id="movie_image" width="100"></td>
+						<td style="padding:5px" id="sinopsis"><!-- sinopsis --></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>8/10</td>
 					</tr>
 				</table>
-				
+				<p>&nbsp;</p>
 				<div class="btn-group">
 			    <button class="btn">YA LA VI</button>
 			    <button class="btn">FAVORITO</button>
-			    <button class="btn">CHECK-IN</button>
+			    <button class="btn data-rt-id checkin-btn">CHECK-IN</button>
 			    </div>
-				
+				<p>&nbsp;</p>
 			</div>
-
 			
+			<h5>Comentarios</h5>
 			<table  class="table table-hover">
 				<tr>
 					<td>Avatar</td>
 					<td>
-						<span>Hector Centeno</span>
+						<p><strong>Hector Centeno</strong></p>
 						<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+						<p>4/10</p>
 					</td>
-					<td>4/10</td>
+					
 				</tr>
 			</table>
 
@@ -70,5 +71,10 @@
 		
 		
 	</div>
+	<script type="text/javascript" charset="utf-8">
+		var rt_movie_id = <?php echo $_GET['movie_id'] ?>;
+		loadMovieDetailRT(rt_movie_id);
+		
+	</script>
 </body>
 </html>

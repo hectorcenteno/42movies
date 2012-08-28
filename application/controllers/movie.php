@@ -31,11 +31,28 @@ class Movie extends CI_Controller
 			redirect('welcome', 'location'); 
 		}
 		
-			$this->load->view('movie_detail');
+		$this->load->view('movie_detail');
 	}
 	public function chekin()
 	{
 		// Agrega una actividad 'waching'
+		$this->MovieModel->insert(
+			array(
+				'name' => $_POST['title'],
+				'year' => $_POST['year'],
+				'descripcion' => $_POST['description'],
+				'banner_url' => $_POST['banner_url'], 
+				'thumbnail_url' => $_POST['thumbnail_url'], 
+				'source' => 'rt',
+				'resource_url' => $_POST['source_url']
+			
+			)
+		);
+	}
+	public function jscheckin()
+	{
+		$this->chekin();
 		
+		$this->load->view('movie_jscheckin');
 	}
 }
